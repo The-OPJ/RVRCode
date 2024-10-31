@@ -22,6 +22,9 @@ while number_of_colors_used < 4:
 
     if code == "code green":
         used_colors.append("green")
+        number_of_colors_used += 1
+        print("Totally got green color ")
+        continue
 
     try:
         file = [file for file in os.listdir(path + r"\Sphero Files")][0]
