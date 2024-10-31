@@ -18,7 +18,10 @@ while True:
 used_colors = []
 number_of_colors_used = 0
 while number_of_colors_used < 4:
-    input("Ready for next file to be grabbed? ")
+    code = input("Ready for next file to be grabbed? ").lower().strip()
+
+    if code == "code green":
+        used_colors.append("green")
 
     try:
         file = [file for file in os.listdir(path + r"\Sphero Files")][0]

@@ -26,9 +26,11 @@ while True:
         print("There was a file not found error")
         continue
 
+
 safety = False
 if input("Safe mode? ").lower() == "yes":
     safety = True
+
 
 RVRCode = ""
 if not safety:
