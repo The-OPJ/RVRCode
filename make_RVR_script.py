@@ -20,6 +20,8 @@ while True:
         day = [input("Date: ")]
         averages = {}
         for color in colors:
+            if color == r"\Green":
+                continue
             ignored, averages[color] = get_vals(color, day)
         break
     except FileNotFoundError:
@@ -48,7 +50,7 @@ with open("RVRScriptFromPython.lab", 'w') as file:
     file.write('{"identifier":"3cbc8719-b072-4f4f-84c4-3b4aa38d4b9a","name":"AVR Python Test","summary":"","data":"14;')
     
     # Colors
-    file.write(f'const RED = {make_color(colors[0])};const GREEN = {make_color(colors[1])};const BLUE = {make_color(colors[2])};const YELLOW = {make_color(colors[3])};const TOLERANCE = 30;')
+    file.write(f'const RED = {make_color(colors[0])};const GREEN = null;const BLUE = {make_color(colors[2])};const YELLOW = {make_color(colors[3])};const TOLERANCE = 30;')
     
     # Main code
     file.write(RVRCode)

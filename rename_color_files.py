@@ -23,6 +23,8 @@ while number_of_colors_used < 4:
     if code == "code green":
         used_colors.append("green")
         number_of_colors_used += 1
+        with open(os.path.join(path + r"\Raw Data Files", r"Green" + " - " + date + ".csv"), 'w') as file:
+            file.write("Hi")
         print("Totally got green color ")
         continue
 
